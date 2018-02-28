@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import logo from '../../logo.svg';
+import React from 'react';
+import Header from "../../components/Layout/Header/Header";
 
-class Home extends Component {
-  render() {
+function Home(props) {
     return (
-      <div>
+        <div>
 
-      </div>
+        </div>
     );
-  }
 }
 
 export default Home;
