@@ -9,6 +9,7 @@ function Menu(props) {
                 #Menu {
                     background: red;
                     display: inline-block;
+                    float: right;
                 }
             `}</style>
         </div>

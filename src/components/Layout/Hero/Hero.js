@@ -7,7 +7,9 @@ const Hero = (props) => {
             {/*language=CSS*/}
             <style jsx>{`
                 #Hero {
+                    background: darkred;
                     height: 18em;
+                    width: 100%;
                 }
             `}</style>
         </div>

@@ -3,11 +3,11 @@ import React from 'react';
 const Logo = (props) =>{
     return (
         <div className="Logo">
-            Logo
+                logo
             {/*language=CSS*/}
             <style jsx>{`
                 .Logo {
-                    background: midnightblue;
+                    background: palegreen;
                     display: inline-block;
                     width: 14em;
                 }

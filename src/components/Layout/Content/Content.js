@@ -1,15 +1,12 @@
 import React from 'react';
-import Menu from "./Menu/Menu";
-import Logo from "../../Logo/Logo";
 
-const Top = (props) => {
+const Content = (props) => {
     return (
-        <div id="Top">
-            <Logo/>
-            <Menu/>
+        <div>
+            {props.children}
             {/*language=CSS*/}
             <style jsx>{`
-                #Top {
+                #Content {
                     padding-left: 5%;
                     padding-right: 5%;
                 }
@@ -18,4 +15,4 @@ const Top = (props) => {
     );
 }
 
-export default Top;
+export default Content;
