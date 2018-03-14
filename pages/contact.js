@@ -1,11 +1,9 @@
 import React from 'react';
 
-function Menu(props) {
+export default (props) => {
     return (
         <div>
-            MENU
+
         </div>
     );
 }
-
-export default Menu; 

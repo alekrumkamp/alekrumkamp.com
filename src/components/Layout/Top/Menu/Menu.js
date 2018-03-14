@@ -1,19 +1,18 @@
 import React from 'react';
 
-const Logo = (props) =>{
+function Menu(props) {
     return (
-        <div className="Logo">
-            Logo
+        <div id="Menu">
+            MENU
             {/*language=CSS*/}
             <style jsx>{`
-                .Logo {
-                    background: midnightblue;
+                #Menu {
+                    background: red;
                     display: inline-block;
-                    width: 14em;
                 }
             `}</style>
         </div>
     );
 }
 
-export default Logo;
+export default Menu; 

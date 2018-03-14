@@ -1,9 +1,9 @@
 import React from 'react';
 import Logo from "../../Logo/Logo";
-import Menu from "../Menu/Menu";
+import Menu from "../Top/Menu/Menu";
 import Hero from "../Hero/Hero";
 
-function Header(props) {
+const Header =(props) => {
     return (
         <div>
             <Logo/>

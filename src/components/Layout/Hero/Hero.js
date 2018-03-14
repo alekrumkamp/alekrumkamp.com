@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Hero(props) {
+const Hero = (props) => {
     return (
-        <div>
+        <div id="Hero">
             Hero
+            {/*language=CSS*/}
+            <style jsx>{`
+                #Hero {
+                    height: 18em;
+                }
+            `}</style>
         </div>
     );
 }
