@@ -7,9 +7,9 @@ import Profile from "../src/components/Profile/Profile";
 export default (props) => {
     return (
         <Layout>
-            <Profile/>
-            <TweetContainer/>
-            <FeedContainer/>
+            <Profile />
+            <TweetContainer />
+            <FeedContainer />
         </Layout>
     );
 }

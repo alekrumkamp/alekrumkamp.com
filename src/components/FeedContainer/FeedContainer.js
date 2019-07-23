@@ -1,30 +1,36 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import fetch from 'isomorphic-fetch';
+import Post from '../Post/Post'
 
-export default class FeedContainer extends Component{
-
-    componentDidMount(){
-        this.fetchFeed();
+export default class FeedContainer extends Component {
+    constructor() {
+        super()
+        this.state = {
+            articles: []
+        }
     }
 
-    async fetchFeed() {
-        let req = await fetch('https://umr8fj85l5.execute-api.us-east-1.amazonaws.com/prod/medium-alekrumkamp-feed');
-        let json = await req.json();
-        let articles = await json.payload.references.Post;
-        console.log(articles);
+    componentDidMount() {
+        const articles = [];
+        this.fetchFeed()
+            .then(feed => {
+                feed.forEach(article => {
+                    articles.push(<Post key="w" title={article.title} img={article.imageUrl} subtitle={article.shortDescription} />)
+                })
+                this.setState({ articles: articles })
+            })
+    }
 
-        Object.keys(articles)
-            .forEach((key,index) => {
-                console.log(key)
-                console.log(articles.key.title)
-        })
-        return articles;
+    fetchFeed() {
+        return fetch('https://medium-feed-full.alekrumkamp.workers.dev')
+            .then(res => res.json())
+            .then(res => res.data.posts)
     }
 
     render() {
         return (
             <div id="FeedContainer">
-
+                {this.state.articles}
                 {/*language=CSS*/}
                 <style jsx>{`
                     #FeedContainer {
